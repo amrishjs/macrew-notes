@@ -8,6 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { Note } from '../../../types/notes';
+import { IMAGE_BASE_URL } from '../../../services/axios';
 
 interface NoteItemProps {
   note: Note;
@@ -42,7 +43,10 @@ export const NoteItem: React.FC<NoteItemProps> = memo(
       <View style={styles.container}>
         <View style={styles.content}>
           {note.image && (
-            <Image source={{ uri: note.image }} style={styles.image} />
+            <Image
+              source={{ uri: `${IMAGE_BASE_URL}${note.image}` }}
+              style={styles.image}
+            />
           )}
           <View style={styles.textContainer}>
             <Text style={styles.title} numberOfLines={1}>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { CreateNoteRequest, Note, UpdateNoteRequest } from '../types/notes';
 
 const BASE_URL = 'BASE_URL_HERE';
+export const IMAGE_BASE_URL = 'BASE_URL_HERE';
 
 export const ApiService = {
   BASE_URL: BASE_URL,
